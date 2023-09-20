@@ -1,0 +1,423 @@
+/* reset css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+/* general format */
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+.clear::after {
+  clear: both;
+}
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #000;
+  color: #fff;
+}
+
+.btn:hover,
+.modal-close:hover {
+  background: #ccc;
+  color: #000;
+  cursor: pointer;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+.mt-16 {
+  margin-top: 16px;
+}
+.mb-16 {
+  margin-bottom: 16px;
+}
+.ml-16 {
+  margin-left: 16px;
+}
+.mr-16 {
+  margin-right: 16px;
+}
+.mt-15 {
+  margin-top: 15px;
+}
+.mr-15 {
+  margin-right: 15px;
+}
+.mb-15 {
+  margin-bottom: 15px;
+}
+.ml-15 {
+  margin-left: 15px;
+}
+/* HEADER */
+#header {
+  height: 46px;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* HEADER > NAVBAR */
+.header__navbar {
+  display: flex;
+  align-items: center;
+}
+.navbar-item a {
+  display: inline-block;
+  width: 100%;
+}
+.navbar-item > a {
+  padding: 0 24px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 46px;
+}
+.header__navbar li:hover > a {
+  color: #000;
+  background: #ccc;
+}
+
+/* HEADER > NAVBAR > SUBNAV */
+.header__navbar li:last-child {
+  position: relative;
+}
+.subnav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.header__navbar li:last-child:hover .subnav {
+  display: block;
+}
+.subnav-item a {
+  display: block;
+  padding: 10px 16px;
+  min-width: 160px;
+  color: black;
+  background: #fff;
+  text-transform: capitalize;
+}
+
+/* HEADER > SEARCH */
+.mobile-menu-btn,
+.header__search-btn {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  line-height: 46px;
+  padding: 0 24px;
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+.header__search-btn:hover {
+  background: #f44336;
+  cursor: pointer;
+}
+
+.mobile-menu-btn:hover {
+  background: #ccc;
+  color: #000;
+}
+
+/* HEADER > MOBILE MENU */
+
+/* SLIDER */
+#slider {
+  padding-top: 50%;
+  margin-top: 46px;
+  background: url(../img/slider/chicago.jpg) top center / cover no-repeat;
+  width: 100%;
+  position: relative;
+}
+.slider__text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 32px 16px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 1px #000;
+}
+.text__place-name {
+  font-size: 24px;
+  text-transform: capitalize;
+  margin: 10px 0;
+}
+.text__place-desc {
+  font-weight: bold;
+}
+
+/* CONTENT */
+.container {
+  width: 800px;
+  max-width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: auto;
+}
+.footer__section,
+.content__section {
+  padding: 64px 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.section__heading {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 10px 0;
+}
+
+.section__sub-heading {
+  font-style: italic;
+  opacity: 0.6;
+  margin: 15px 0;
+}
+
+/* CONTENT > BAND */
+.band__about {
+  text-align: justify;
+}
+
+.member-list {
+  padding: 32px 0;
+}
+.member__img {
+  width: 60%;
+  border-radius: 5px;
+}
+
+/* CONTENT > TOUR */
+.container--black {
+  background: #000;
+}
+
+#tour .section__heading,
+#tour .section__sub-heading {
+  color: #fff;
+}
+.tour__list {
+  display: block;
+  background: #fff;
+  text-align: left;
+  margin-top: 40px;
+}
+.tour__list-item {
+  border: #ddd 1px solid;
+  padding: 8px 16px;
+  color: #757575;
+}
+
+.tour--sold-out::after {
+  content: "Sold out";
+  display: inline-block;
+  background: #f44336;
+  padding: 0 8px;
+  margin-left: 16px;
+  color: #fff;
+}
+
+.tour__list .quantity {
+  display: inline-block;
+  float: right;
+  background: #000;
+  color: #fff;
+  padding: 0 8px;
+  border-radius: 15px;
+  margin-right: 16px;
+}
+.ticket-list {
+  padding: 32px 0;
+}
+.ticket__img {
+  width: 100%;
+  display: block;
+}
+.ticket__img:hover {
+  opacity: 0.6;
+}
+.ticket__info {
+  background: #fff;
+  padding: 0 16px;
+  text-align: left;
+}
+.ticket-info__place {
+  font-weight: 600;
+  padding-top: 15px;
+}
+.ticket-info__date {
+  opacity: 0.6;
+}
+
+/* BUY TICKET MODAL */
+.ticket-modal {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  display: none;
+}
+
+.ticket-modal.open {
+  display: flex;
+}
+.modal-container {
+  top: 15%;
+  position: relative;
+  width: 900px;
+  max-width: calc(100% - 32px);
+  height: 100px;
+  background: #fff;
+  animation: modalFadeIn ease 0.5s;
+}
+
+.modal-header {
+  background: #009688;
+  padding: 42px;
+  color: #fff;
+}
+
+.modal-title {
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 18px;
+  font-size: 13px;
+  color: #fff;
+}
+
+.modal-body {
+  padding: 16px;
+  background: #fff;
+}
+.modal-label i {
+  font-size: 12px;
+  margin-right: 4px;
+}
+.modal-input {
+  width: 100%;
+  font-size: 15px;
+  padding: 10px 8px;
+  border: 1px solid #ccc;
+  margin: 10px 0 20px;
+}
+
+.modal-pay-btn {
+  background: #009688;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.modal-help {
+  margin: 30px 0 15px;
+  width: 100%;
+  text-align: right;
+}
+.modal-help__link {
+  text-decoration: underline;
+  color: #2196f3;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* CONTENT > CONTACT */
+.contact-section {
+  padding: 32px 0;
+}
+.contact-info {
+  font-size: 18px;
+  text-align: left;
+}
+
+.contact-info i {
+  font-size: 15px;
+  margin-right: 15px;
+}
+
+.contact-input {
+  font-size: 15px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-btn {
+  float: right;
+  border: none;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+/* MAP */
+.map-img {
+  width: 100%;
+  filter: grayscale(0.5);
+  display: block;
+}
+
+/* FOOTER */
+.container--grey {
+  background: #f1f1f1;
+}
+#footer {
+  opacity: 0.6;
+}
+.footer-icon i {
+  font-size: 24px;
+  margin: 0 3px;
+  color: #000;
+}
+.footer-icon i:hover,
+.powered-link:hover {
+  opacity: 0.4;
+}
+
+.powered-link {
+  color: #000;
+  text-decoration: underline;
+}

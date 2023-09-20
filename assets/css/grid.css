@@ -1,0 +1,112 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.col {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.col-full {
+  width: 100%;
+}
+.col-half {
+  width: 50%;
+}
+.col-third {
+  width: 33.333333%;
+}
+
+/* PC */
+@media (min-width: 64em) {
+}
+
+/* TABLET */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+}
+/* TABLET + MOBILE */
+
+@media (max-width: 46.1875em) {
+  .btn {
+    padding: 13px 16px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-input {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .modal-input {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .subnav .subnav-item a {
+    padding: 15px 16px;
+  }
+  .footer-icon i {
+    font-size: 40px;
+    margin: 10px 20px;
+  }
+  .footer-powered {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  .contact-info {
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 739px) {
+  #header {
+    overflow: hidden;
+  }
+
+  .navbar-item.header-home {
+    display: inline-block;
+  }
+  .header__navbar {
+    width: 100%;
+    display: block;
+  }
+  .navbar-item + .navbar-item {
+    width: 100%;
+    display: block;
+  }
+
+  #header .subnav {
+    position: initial;
+  }
+  .subnav .subnav-item a {
+    background: #000;
+    color: #fff;
+    padding-left: 40px;
+  }
+
+  .header__search {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+  .header__search-btn {
+    display: none;
+  }
+  .slider__text {
+    display: none;
+  }
+
+  .contact-guest,
+  .contact-item,
+  .member-item,
+  .ticket-item {
+    width: 100%;
+  }
+}
